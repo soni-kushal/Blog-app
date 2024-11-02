@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import getPostMetada from '../../../../helper/getPostMetaData';
+import React from 'react';
 
 const getPostContent= (slug:string)=>{
     const folder = "markdown/"
@@ -18,10 +19,14 @@ export const generateStaticParams = async () => {
     }));
   };
 
+interface BlogPostProps {
+    params: Promise<{
+        slug: string;
+    }>;
+}
+export default function BlogPost({params}: BlogPostProps){
 
-export default function BlogPost({params}: any){
-
-    const slug = params.slug
+    const {slug} = React.use(params)
     const post = getPostContent(slug)
 
     return (

@@ -7,10 +7,10 @@ export default function Home() {
         {/* <div className='image' >
             <img src={photu} alt='Kushals profile' className=' rounded-full' />
         </div> */}
-        <div className='title-text'>
+        <div className='title-text text-center'>
             <h1 className='naam font-semibold '>Kushal Kumar Soni</h1>
             <div className='doctorate'>Doctoral Scholar</div>
-            <div className='uni'>Department of Political Science,</div>
+            <div className='doctorate'>Department of Political Science</div>
             <div className='doctorate' >University of Hyderabad </div>
             <div className='button-box'>
 
@@ -39,14 +39,6 @@ export default function Home() {
         </section>
         <hr />
 
-{/* 
-        <section>
-            <h2 className='section-title'> Latest Writing </h2>
-
-            <BlogItem post={recentBlog} />
-        
-        
-        </section> */}
     </div>
 
 </div>

@@ -1,13 +1,16 @@
 import "./globals.css"
+import {Quicksand} from "next/font/google"
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Kushal Soni",
   description: "Blogs about AI and internationl relations",
 };
 
+const fontsyte = Quicksand({ subsets: ['latin'] });
+ 
 
 export default function RootLayout({
   children,
@@ -15,11 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={fontsyte.className}>
       <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"/> 
+        <title>{`${metadata.title}`}</title>
+        <meta name="description" content={`${metadata.description}`} />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className=" flex flex-col min-h-svh ">
