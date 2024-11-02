@@ -35,7 +35,7 @@ export default function BlogPost({params}: BlogPostProps){
             <h1 className=' text-3xl text-slate-800 dark:text-teal-500 font-bold'>{post.data.title}</h1>
             <p className='text-slate-500'>{post.data.date.toDateString()}</p>
             </div>
-            <article className='text-lg prose max-w-none md:prose-lg prose-slate dark:prose-invert'>
+            <article className='text-lg prose max-w-none md:prose-lg prose-slate dark:prose-invert my-2'>
                 <Markdown>
                     {post.content}
                 </Markdown>
